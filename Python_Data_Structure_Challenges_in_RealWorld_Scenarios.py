@@ -3,10 +3,11 @@
 def add_new_book(library):
     title = input("Enter the book's title to add: ")
     author = input("Enter the author: ")
-    if title in library:
+    book = (title, author)
+    if book in library:
         print("Book already exists in library.")
     else:
-        library.append((title, author))
+        library.append(book)
         print(f"New book '{title}' by {author} has been added to the library.")
 
 
